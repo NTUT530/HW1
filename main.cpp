@@ -24,13 +24,18 @@ int main(int argc, char *argv[])
 
 	Shape *shape;
 	Rectangle rect;
+	triangle tri;
+	circle cir;
 
-    if (strcmp(argv[1], "rectangle") == 0)
+    if (strcmp(argv[1], "rectangle") == 0){
 		shape = &rect;
-	else if (strcmp(argv[1], "triangle") == 0)
-		shape = &triangle;
-	else if (strcmp(argv[1], "circle") == 0)
-		shape = &circle;
+	}
+	else if (strcmp(argv[1], "triangle") == 0){
+		shape = &tri;
+	}
+	else if (strcmp(argv[1], "circle") == 0){
+		shape = &cir;
+	}
 	else {
 		cout << "Error! Unknown shape type" << endl;
 		return -2;
